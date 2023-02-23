@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "identificador",
+    "exames",
+    "cliente",
+    "origemAbertura",
+    "status",
+    "marca",
+    "regional",
+    "linhaNegocio",
+    "multiplo"
+  ],
+  "properties": {
+    "identificador": {
+      "type": "string",
+      "default": "",
+      "title": "The identificador Schema",
+      "examples": [
+        "000086952939"
+      ]
+    },
+    "exames": {
+      "type": "array",
+      "default": [],
+      "title": "The exames Schema",
+      "items": {},
+      "examples": [
+        []
+      ]
+    },
+    "cliente": {
+      "type": "object",
+      "default": {},
+      "title": "The cliente Schema",
+      "required": [
+        "nome",
+        "sexo",
+        "dataNascimento"
+      ],
+      "properties": {
+        "nome": {
+          "type": "string",
+          "default": "",
+          "title": "The nome Schema",
+          "examples": [
+            "Paciente não identificado"
+          ]
+        },
+        "sexo": {
+          "type": "string",
+          "default": "",
+          "title": "The sexo Schema",
+          "examples": [
+            "INDEFINIDO"
+          ]
+        },
+        "dataNascimento": {
+          "type": "string",
+          "default": "",
+          "title": "The dataNascimento Schema",
+          "examples": [
+            "1991-01-01"
+          ]
+        }
+      },
+      "examples": [{
+        "nome": "Paciente não identificado",
+        "sexo": "INDEFINIDO",
+        "dataNascimento": "1991-01-01"
+      }]
+    },
+    "origemAbertura": {
+      "type": "string",
+      "default": "",
+      "title": "The origemAbertura Schema",
+      "examples": [
+        "DIGITAL_AUTO_AGENDAMENTO"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "default": "",
+      "title": "The status Schema",
+      "examples": [
+        "NAO_CONFIRMADO"
+      ]
+    },
+    "marca": {
+      "type": "string",
+      "default": "",
+      "title": "The marca Schema",
+      "examples": [
+        "AM"
+      ]
+    },
+    "regional": {
+      "type": "string",
+      "default": "",
+      "title": "The regional Schema",
+      "examples": [
+        "SP"
+      ]
+    },
+    "linhaNegocio": {
+      "type": "string",
+      "default": "",
+      "title": "The linhaNegocio Schema",
+      "examples": [
+        "ATENDIMENTO"
+      ]
+    },
+    "multiplo": {
+      "type": "boolean",
+      "default": false,
+      "title": "The multiplo Schema",
+      "examples": [
+        false
+      ]
+    }
+  },
+  "examples": [{
+    "identificador": "000086952939",
+    "exames": [],
+    "cliente": {
+      "nome": "Paciente não identificado",
+      "sexo": "INDEFINIDO",
+      "dataNascimento": "1991-01-01"
+    },
+    "origemAbertura": "DIGITAL_AUTO_AGENDAMENTO",
+    "status": "NAO_CONFIRMADO",
+    "marca": "AM",
+    "regional": "SP",
+    "linhaNegocio": "ATENDIMENTO",
+    "multiplo": false
+  }]
+}
